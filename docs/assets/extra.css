@@ -1,0 +1,171 @@
+/* The docs wear the design system: Material's variables point at the tokens. */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Syne:wght@700;800&display=swap");
+
+:root {
+  --md-primary-fg-color: var(--cc-ink-0);
+  --md-primary-bg-color: var(--cc-bone);
+  --md-accent-fg-color: var(--cc-chili);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--cc-ink-0);
+  --md-default-fg-color: var(--cc-bone);
+  --md-default-fg-color--light: var(--cc-mist);
+  --md-code-bg-color: var(--cc-ink-2);
+  --md-footer-bg-color: var(--cc-black);
+  --md-typeset-a-color: var(--cc-leaf-bright);
+  --md-typeset-table-color: var(--cc-ink-4);
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: var(--cc-bone);
+  --md-default-fg-color: var(--cc-ink-2);
+  --md-default-fg-color--light: var(--cc-slate);
+  --md-code-bg-color: var(--cc-paper);
+  --md-typeset-a-color: var(--cc-leaf-ink);
+}
+
+.md-header {
+  border-bottom: 2px solid var(--cc-chili);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: var(--cc-font-display);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.md-typeset h1 { color: var(--md-default-fg-color); }
+
+/* Square corners everywhere */
+.md-typeset code,
+.md-typeset pre > code,
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset table:not([class]),
+.md-search__form {
+  border-radius: 0;
+}
+
+/* Demo stage: a slice of a real page. Dark by default, light with data-theme="light". */
+.cc-demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cc-space-5);
+  margin: 1em 0;
+  padding: var(--cc-space-6);
+  border: 1px solid var(--cc-line);
+  background: var(--cc-bg);
+  color: var(--cc-text);
+}
+
+.cc-demo--stack {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.cc-demo + .highlight { margin-top: -1em; }
+.md-typeset .cc-demo a.cc-btn { color: var(--cc-on-accent); }
+.md-typeset .cc-demo a.cc-btn--secondary { color: var(--cc-text); }
+.md-typeset .cc-demo a.cc-btn--quiet { color: var(--cc-link); }
+.md-typeset .cc-demo p { margin: 0; }
+
+/* Colour swatches */
+.cc-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: var(--cc-space-4);
+  margin: 1em 0 2em;
+}
+
+.cc-swatch {
+  display: grid;
+  gap: 2px;
+  font-size: 0.7rem;
+}
+
+.cc-swatch__chip {
+  display: block;
+  height: 4.5rem;
+  margin-bottom: var(--cc-space-2);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.cc-swatch strong { font-size: 0.8rem; }
+.cc-swatch code { width: fit-content; }
+.cc-swatch small { color: var(--md-default-fg-color--light); }
+
+.cc-dot {
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: -0.1em;
+}
+
+/* Logo on different backgrounds */
+.cc-plates {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: var(--cc-space-4);
+  margin: 1em 0;
+}
+
+.cc-plate {
+  margin: 0;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.cc-plate img,
+.cc-plate svg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: var(--cc-space-2);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.cc-plate--no figcaption::before { content: "✕ "; color: var(--cc-chili); font-weight: 700; }
+.cc-plate--yes figcaption::before { content: "✓ "; color: var(--cc-leaf); font-weight: 700; }
+
+/* Type specimens */
+.cc-specimen {
+  margin: 1em 0;
+  padding: var(--cc-space-5);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.cc-specimen p { margin: 0; line-height: 1.2; }
+.cc-specimen small { display: block; margin-top: var(--cc-space-3); color: var(--md-default-fg-color--light); }
+
+/* Space scale bars */
+.cc-bar {
+  display: inline-block;
+  height: 0.8rem;
+  background: var(--cc-chili);
+  box-shadow: 0 3px 0 var(--cc-chili-shade);
+  vertical-align: middle;
+}
+
+/* Console screens are pixel art: keep them sharp when scaled */
+.md-typeset img.pixel {
+  width: 256px;
+  max-width: 100%;
+  border: 1px solid var(--cc-ink-4);
+  image-rendering: pixelated;
+}
+
+.md-typeset .screens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.md-typeset .screens figure {
+  margin: 0;
+  font-size: 0.7rem;
+}

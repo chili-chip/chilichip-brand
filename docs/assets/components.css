@@ -1,0 +1,170 @@
+/*
+ * chilichip reference components. They only use the tokens in tokens/chilichip.css.
+ * Copy what you need; this is a pattern sheet, not a framework.
+ */
+
+.cc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--cc-space-2);
+  padding: var(--cc-space-3) var(--cc-space-5);
+  border: 1px solid var(--cc-accent);
+  border-radius: var(--cc-radius-none);
+  background: var(--cc-accent);
+  box-shadow: var(--cc-shadow-button);
+  color: var(--cc-on-accent);
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-sm);
+  font-weight: 500;
+  letter-spacing: var(--cc-tracking-label);
+  line-height: var(--cc-leading-tight);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform var(--cc-motion-fast) var(--cc-motion-ease), box-shadow var(--cc-motion-fast) var(--cc-motion-ease);
+}
+
+.cc-btn:hover {
+  background: var(--cc-accent-shade);
+  border-color: var(--cc-accent-shade);
+}
+
+/* Pressing moves the button onto its shadow */
+.cc-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.cc-btn:focus-visible,
+.cc-input:focus-visible {
+  outline: 2px solid var(--cc-focus);
+  outline-offset: 2px;
+}
+
+.cc-btn--secondary {
+  background: transparent;
+  border-color: var(--cc-text);
+  box-shadow: 4px 4px 0 var(--cc-line);
+  color: var(--cc-text);
+}
+
+.cc-btn--secondary:hover {
+  background: var(--cc-surface-raised);
+  border-color: var(--cc-text);
+}
+
+.cc-btn--quiet {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: var(--cc-link);
+}
+
+.cc-btn--quiet:hover {
+  background: transparent;
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+.cc-btn:disabled,
+.cc-btn[aria-disabled="true"] {
+  background: var(--cc-surface-raised);
+  border-color: var(--cc-line);
+  box-shadow: none;
+  color: var(--cc-muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cc-card {
+  padding: var(--cc-space-5);
+  border: 1px solid var(--cc-line);
+  background: var(--cc-surface);
+  box-shadow: var(--cc-shadow-card);
+  color: var(--cc-text);
+}
+
+/* One cut corner, like a facet of the logo */
+.cc-card--cut {
+  border: 0;
+  box-shadow: none;
+  clip-path: polygon(0 0, calc(100% - var(--cc-cut-md)) 0, 100% var(--cc-cut-md), 100% 100%, 0 100%);
+}
+
+.cc-card__title {
+  margin: 0 0 var(--cc-space-2);
+  font-family: var(--cc-font-display);
+  font-size: var(--cc-text-lg);
+  font-weight: 800;
+  line-height: var(--cc-leading-tight);
+}
+
+.cc-card__meta {
+  margin: 0;
+  color: var(--cc-muted);
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-xs);
+}
+
+.cc-badge {
+  display: inline-block;
+  padding: var(--cc-space-1) var(--cc-space-2);
+  border: 1px solid currentColor;
+  color: var(--cc-muted);
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-2xs);
+  letter-spacing: var(--cc-tracking-wide);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cc-badge--accent { color: var(--cc-accent-text); }
+.cc-badge--success { color: var(--cc-success); }
+.cc-badge--warning { color: var(--cc-warning); }
+
+.cc-field {
+  display: grid;
+  gap: var(--cc-space-2);
+  max-width: 20rem;
+}
+
+.cc-label {
+  color: var(--cc-muted);
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-xs);
+  letter-spacing: var(--cc-tracking-label);
+  text-transform: uppercase;
+}
+
+.cc-input {
+  padding: var(--cc-space-3);
+  border: 1px solid var(--cc-line);
+  border-radius: var(--cc-radius-none);
+  background: var(--cc-surface-sunken);
+  color: var(--cc-text);
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-sm);
+}
+
+.cc-hint {
+  color: var(--cc-muted);
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-xs);
+}
+
+.cc-hint--error { color: var(--cc-danger); }
+
+.cc-notice {
+  padding: var(--cc-space-3) var(--cc-space-4);
+  border: 1px solid var(--cc-line);
+  border-left: 4px solid var(--cc-notice-tone, var(--cc-muted));
+  background: var(--cc-surface);
+  color: var(--cc-text);
+  font-family: var(--cc-font-mono);
+  font-size: var(--cc-text-sm);
+}
+
+.cc-notice strong { color: var(--cc-notice-tone, var(--cc-text)); }
+.cc-notice--success { --cc-notice-tone: var(--cc-success); }
+.cc-notice--warning { --cc-notice-tone: var(--cc-warning); }
+.cc-notice--danger { --cc-notice-tone: var(--cc-danger); }

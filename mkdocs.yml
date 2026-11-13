@@ -1,0 +1,89 @@
+site_name: chilichip design system
+site_description: Colours, type, shapes and logo rules for everything chilichip makes, with tokens for the website, Chili Platform, Chili Creator and the chilichip console.
+site_url: https://brand.chilichip.eu/
+repo_url: https://github.com/chili-chip/chilichip-brand
+repo_name: chili-chip/chilichip-brand
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/chilichip-logo.svg
+  favicon: assets/chilichip-logo.svg
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: IBM Plex Mono
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+    - toc.follow
+
+extra_css:
+  - tokens/chilichip.css
+  - assets/components.css
+  - assets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/chili-chip
+      name: chilichip on GitHub
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/xB9sPYKBZc
+      name: chilichip on Discord
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.snippets:
+      base_path: tokens/snippets
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Overview: index.md
+  - Foundations:
+      - Logo and name: logo.md
+      - Colour: colour.md
+      - Typography: typography.md
+      - Space, shape and motion: layout.md
+  - Patterns:
+      - Components: components.md
+      - Small screens: small-screens.md
+  - Use it:
+      - Tokens: tokens.md
+      - Open questions: open-questions.md
