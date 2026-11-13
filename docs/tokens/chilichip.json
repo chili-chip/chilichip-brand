@@ -1,0 +1,134 @@
+{
+  "color": {
+    "chili": "#ff3030",
+    "chili-shade": "#e42020",
+    "leaf": "#2eac00",
+    "chili-deep": "#4c0710",
+    "chili-ink": "#c81616",
+    "leaf-bright": "#6fe33a",
+    "leaf-ink": "#1e7300",
+    "amber": "#ffb347",
+    "amber-ink": "#8a5200",
+    "black": "#000000",
+    "ink-0": "#07080c",
+    "ink-1": "#0c0f14",
+    "ink-2": "#10131a",
+    "ink-3": "#171b24",
+    "ink-4": "#262c38",
+    "slate": "#565e6e",
+    "mist": "#9aa3b5",
+    "sand": "#d8d3c7",
+    "bone": "#f4f1ea",
+    "paper": "#ffffff",
+    "on-chili": "#140407"
+  },
+  "theme": {
+    "dark": {
+      "bg": "#07080c",
+      "surface": "#10131a",
+      "surface-raised": "#171b24",
+      "surface-sunken": "#0c0f14",
+      "line": "#262c38",
+      "text": "#f4f1ea",
+      "muted": "#9aa3b5",
+      "accent": "#ff3030",
+      "accent-shade": "#e42020",
+      "accent-deep": "#4c0710",
+      "accent-text": "#ff3030",
+      "on-accent": "#140407",
+      "link": "#6fe33a",
+      "focus": "#6fe33a",
+      "success": "#6fe33a",
+      "warning": "#ffb347",
+      "danger": "#ff3030"
+    },
+    "light": {
+      "bg": "#f4f1ea",
+      "surface": "#ffffff",
+      "surface-raised": "#ffffff",
+      "surface-sunken": "#d8d3c7",
+      "line": "#d8d3c7",
+      "text": "#10131a",
+      "muted": "#565e6e",
+      "accent": "#ff3030",
+      "accent-shade": "#e42020",
+      "accent-deep": "#4c0710",
+      "accent-text": "#c81616",
+      "on-accent": "#140407",
+      "link": "#1e7300",
+      "focus": "#1e7300",
+      "success": "#1e7300",
+      "warning": "#8a5200",
+      "danger": "#c81616"
+    },
+    "console": {
+      "bg": "#000000",
+      "surface": "#10131a",
+      "line": "#262c38",
+      "text": "#f4f1ea",
+      "muted": "#9aa3b5",
+      "accent": "#ff3030",
+      "accent-shade": "#e42020",
+      "on-accent": "#140407",
+      "success": "#2eac00",
+      "warning": "#ffb347",
+      "danger": "#ff3030"
+    }
+  },
+  "font": {
+    "display": "'Syne', ui-sans-serif, system-ui, sans-serif",
+    "text": "'Inter', ui-sans-serif, system-ui, sans-serif",
+    "mono": "'IBM Plex Mono', ui-monospace, monospace",
+    "pixel": "'Press Start 2P', monospace"
+  },
+  "text": {
+    "3xs": "0.58rem",
+    "2xs": "0.68rem",
+    "xs": "0.75rem",
+    "sm": "0.85rem",
+    "md": "1rem",
+    "lg": "1.2rem",
+    "xl": "1.4rem",
+    "2xl": "clamp(1.6rem, 3vw, 2.2rem)",
+    "3xl": "clamp(2rem, 4vw, 3.2rem)"
+  },
+  "leading": {
+    "tight": "1.2",
+    "normal": "1.5",
+    "loose": "1.65"
+  },
+  "tracking": {
+    "label": "0.08em",
+    "wide": "0.12em"
+  },
+  "space": {
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem"
+  },
+  "radius": {
+    "none": "0",
+    "pill": "999px"
+  },
+  "cut": {
+    "sm": "6px",
+    "md": "12px"
+  },
+  "shadow": {
+    "button": "4px 4px 0 var(--cc-accent-deep)",
+    "card": "6px 6px 0 rgb(255 48 48 / 0.12)",
+    "pop": "8px 8px 0 rgb(255 48 48 / 0.16)"
+  },
+  "motion": {
+    "fast": "0.12s",
+    "normal": "0.2s",
+    "ease": "cubic-bezier(0.2, 0.7, 0.2, 1)"
+  }
+}
